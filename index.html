@@ -916,5 +916,18 @@
         }
     });
 </script>
+<script>
+  // Close navbar collapse when a link is clicked
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
+    navLink.addEventListener('click', function () {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        // Bootstrap toggler: simulate a click to close
+        document.querySelector('.navbar-toggler').click();
+      }
+    });
+  });
+</script>
+
   </body>
 </html>
